@@ -593,7 +593,7 @@ static void ui_companion_cocoatouch_notify_content_loaded(void *data)
       [ap showGameView];
 }
 
-static void ui_companion_cocoatouch_toggle(void *data)
+static void ui_companion_cocoatouch_toggle(void *data, bool force)
 {
    RetroArch_iOS *ap   = (RetroArch_iOS *)apple_platform;
 
@@ -686,7 +686,7 @@ static void ui_companion_cocoatouch_render_messagebox(const char *msg)
    }
 }
 
-static void ui_companion_cocoatouch_msg_queue_push(const char *msg,
+static void ui_companion_cocoatouch_msg_queue_push(void *data, const char *msg,
    unsigned priority, unsigned duration, bool flush)
 {
    RetroArch_iOS *ap   = (RetroArch_iOS *)apple_platform;
