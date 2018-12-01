@@ -204,9 +204,9 @@ void *glkitview_init(void);
 }
 
 /* NOTE: This version runs on iOS6+. */
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
-   return (NSUInteger)apple_frontend_settings.orientation_flags;
+   return (UIInterfaceOrientationMask)apple_frontend_settings.orientation_flags;
 }
 
 /* NOTE: This version runs on iOS2-iOS5, but not iOS6+. */
